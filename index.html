@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Scroll animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Glass effect */
+    .glass {
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* Skill pill */
+    .skill {
+      padding: 0.4rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.25s ease;
+    }
+    .skill:hover {
+      background: rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50">
+  <nav class="glass mx-4 mt-4 rounded-xl">
+    <div class="flex justify-between items-center px-6 py-4">
+      <span class="font-bold text-xl tracking-wide">YourName.dev</span>
+      <div class="space-x-6 text-sm hidden md:block">
+        <a href="#skills" class="hover:text-indigo-400">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400">Projects</a>
+        <a href="#about" class="hover:text-indigo-400">About</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="fade-up max-w-4xl">
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+      Designing & Building <br />
+      <span class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+        Scalable Web Apps
+      </span>
+    </h1>
+
+    <p class="mt-6 text-gray-300 text-lg">
+      Full-Stack Engineer focused on clean architecture, performance, and great UX.
+    </p>
+
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="#projects" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition shadow-lg">
+        View Work
+      </a>
+      <a href="#contact" class="px-6 py-3 rounded-lg border border-gray-600 hover:border-indigo-500 transition">
+        Contact Me
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold mb-12 fade-up text-center">Tech Stack</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-indigo-400">Frontend</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">React</span>
+        <span class="skill">Next.js</span>
+        <span class="skill">TypeScript</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Tailwind CSS</span>
+        <span class="skill">Material UI</span>
+        <span class="skill">Recharts</span>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-purple-400">Backend</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">Node.js</span>
+        <span class="skill">Express</span>
+        <span class="skill">NestJS</span>
+        <span class="skill">Python</span>
+        <span class="skill">FastAPI</span>
+        <span class="skill">Java</span>
+        <span class="skill">Spring Boot</span>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-cyan-400">Databases</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">PostgreSQL</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">Snowflake</span>
+        <span class="skill">Redis</span>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-orange-400">Cloud & DevOps</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">AWS</span>
+        <span class="skill">Azure</span>
+        <span class="skill">GCP</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Kubernetes</span>
+        <span class="skill">Terraform</span>
+        <span class="skill">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-pink-400">Architecture</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">Microservices</span>
+        <span class="skill">REST APIs</span>
+        <span class="skill">Event-Driven</span>
+        <span class="skill">System Design</span>
+        <span class="skill">Scalability</span>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <h3 class="text-xl font-semibold mb-4 text-green-400">Tools</h3>
+      <div class="flex flex-wrap gap-3">
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">Jira</span>
+        <span class="skill">Postman</span>
+        <span class="skill">Figma</span>
+        <span class="skill">VS Code</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold mb-12 fade-up">Selected Projects</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <img src="https://via.placeholder.com/600x400" class="rounded-xl mb-4">
+      <h3 class="text-xl font-semibold mb-2">AI Analytics Platform</h3>
+      <p class="text-gray-300 text-sm mb-4">
+        Scalable analytics dashboard with real-time data processing.
+      </p>
+      <a href="#" class="text-indigo-400 hover:underline">View Project →</a>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <img src="https://via.placeholder.com/600x400" class="rounded-xl mb-4">
+      <h3 class="text-xl font-semibold mb-2">Workflow Automation Tool</h3>
+      <p class="text-gray-300 text-sm mb-4">
+        Automation platform with event-driven microservices.
+      </p>
+      <a href="#" class="text-indigo-400 hover:underline">View Project →</a>
+    </div>
+
+    <div class="glass rounded-2xl p-6 fade-up hover:-translate-y-2 transition">
+      <img src="https://via.placeholder.com/600x400" class="rounded-xl mb-4">
+      <h3 class="text-xl font-semibold mb-2">FinTech Forecast App</h3>
+      <p class="text-gray-300 text-sm mb-4">
+        Interactive financial forecasting with dynamic charts.
+      </p>
+      <a href="#" class="text-indigo-400 hover:underline">View Project →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center">
+  <h2 class="text-4xl font-bold mb-6 fade-up">About Me</h2>
+  <p class="text-gray-300 fade-up">
+    I’m a full-stack engineer with experience delivering enterprise-grade applications
+    using modern frontend frameworks, scalable backend systems, and cloud infrastructure.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 text-center">
+  <h2 class="text-4xl font-bold mb-6 fade-up">Let’s Build Something</h2>
+  <p class="text-gray-400 mb-8 fade-up">
+    Open to full-time roles, freelance, and exciting collaborations.
+  </p>
+  <a href="mailto:you@email.com"
+     class="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg hover:scale-105 transition fade-up">
+    Get In Touch
+  </a>
+</section>
+
+<footer class="text-center text-gray-500 text-sm py-6">
+  © 2025 Your Name — Built with ❤️
+</footer>
+
+<!-- Scroll Reveal Script -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
